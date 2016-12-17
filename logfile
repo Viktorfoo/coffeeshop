@@ -1,0 +1,98 @@
+LOG:  database system was shut down at 2016-12-07 22:27:43 SGT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  role "Administrator" does not exist
+FATAL:  role "Administrator" does not exist
+FATAL:  database "coffeshop" does not exist
+FATAL:  database "coffeshop" does not exist
+ERROR:  database "coffeeshop_dev" already exists
+STATEMENT:  CREATE DATABASE "coffeeshop_dev" ENCODING = 'utf8'
+ERROR:  database "coffeeshop_test" already exists
+STATEMENT:  CREATE DATABASE "coffeeshop_test" ENCODING = 'utf8'
+ERROR:  type "lonlat" does not exist at character 39
+STATEMENT:  ALTER TABLE "products" ADD "st_point" lonlat
+ERROR:  type "lonlat" does not exist at character 39
+STATEMENT:  ALTER TABLE "products" ADD "st_point" lonlat
+ERROR:  type "lonlat" does not exist at character 39
+STATEMENT:  ALTER TABLE "products" ADD "st_point" lonlat
+ERROR:  type "lonlat" does not exist at character 39
+STATEMENT:  ALTER TABLE "products" ADD "st_point" lonlat
+ERROR:  type "st_point" does not exist at character 37
+STATEMENT:  ALTER TABLE "products" ADD "lonlat" st_point
+ERROR:  syntax error at or near "shops" at character 8
+STATEMENT:  delete shops
+ERROR:  syntax error at or near "shop" at character 8
+STATEMENT:  delete shop
+ERROR:  syntax error at or near "(" at character 89
+STATEMENT:  select("*, ST_Distance(lonlat, ST_MakePoint(#{lon}, #{lat})) as distance").
+	      	where("ST_DWithin(lonlat, ST_MakePoint(#{lon}, #{lat}), #{distance})").
+	      	order("distance ASC")
+ERROR:  syntax error at or near "{" at character 45
+STATEMENT:  select *, ST_Distance(lonlat, ST_MakePoint(#{lon}, #{lat})) as distance  where ST_DWithin(lonlat, ST_MakePoint(#{lon}, #{lat}), #{distance})
+	      	order("distance ASC")
+ERROR:  syntax error at or near "{" at character 149
+STATEMENT:  select *, ST_Distance(lonlat, ST_MakePoint("1.2921502", "1.2921502")) as distance  where ST_DWithin(lonlat, ST_MakePoint("1.2921502","1.2921502"), #{distance})
+	      	order("distance ASC")
+ERROR:  syntax error at or near "(" at character 165
+STATEMENT:  select *, ST_Distance(lonlat, ST_MakePoint("1.2921502", "1.2921502")) as distance  where ST_DWithin(lonlat, ST_MakePoint("1.2921502","1.2921502"), 400)
+	      	order("distance ASC")
+ERROR:  syntax error at or near "distance" at character 166
+STATEMENT:  select *, ST_Distance(lonlat, ST_MakePoint("1.2921502", "1.2921502")) as distance  where ST_DWithin(lonlat, ST_MakePoint("1.2921502","1.2921502"), 400)
+	      	order distance ASC
+ERROR:  SELECT * with no tables specified is not valid at character 8
+STATEMENT:  select *, ST_Distance(lonlat, ST_MakePoint("1.2921502", "1.2921502")) as distance  where ST_DWithin(lonlat, ST_MakePoint("1.2921502","1.2921502"), 400)
+	
+ERROR:  column "lonlat" does not exist at character 20
+STATEMENT:  select ST_Distance(lonlat, ST_MakePoint("1.2921502", "1.2921502")) as distance  where ST_DWithin(lonlat, ST_MakePoint("1.2921502","1.2921502"), 400)
+	
+ERROR:  column "latlon" does not exist at character 20
+STATEMENT:  select ST_Distance(latlon, ST_MakePoint("1.2921502", "1.2921502")) as distance  where ST_DWithin(lonlat, ST_MakePoint("1.2921502","1.2921502"), 400)
+	
+ERROR:  column "lonlat" does not exist at character 20
+STATEMENT:  select ST_Distance(lonlat, ST_MakePoint("1.2921502", "1.2921502")) as distance  where ST_DWithin(lonlat, ST_MakePoint("1.2921502","1.2921502"), 400)
+	
+ERROR:  column "lonlat" does not exist at character 20
+STATEMENT:  select ST_Distance(lonlat, ST_MakePoint("1.2921502", "1.2921502")) as distance  where ST_DWithin(lonlat, ST_MakePoint("1.2921502","1.2921502"), 400)
+	
+ERROR:  syntax error at or near "from" at character 150
+STATEMENT:  select ST_Distance(lonlat, ST_MakePoint("1.2921502", "1.2921502")) as distance  where ST_DWithin(lonlat, ST_MakePoint("1.2921502","1.2921502"), 400) from shops
+	
+ERROR:  column "1.2921502" does not exist at character 41
+STATEMENT:  select ST_Distance(lonlat, ST_MakePoint("1.2921502", "1.2921502")) as distance from shops  where ST_DWithin(lonlat, ST_MakePoint("1.2921502","1.2921502"), 400) 
+	
+ERROR:  column "1.2921502" does not exist at character 41
+STATEMENT:  select ST_Distance(lonlat, ST_MakePoint("1.2921502", "1.2921502")) as distance from shops  where ST_DWithin(lonlat, ST_MakePoint("2.2921502","2.2921502"), 400) 
+	
+ERROR:  column "1.2921502" does not exist at character 34
+STATEMENT:  select ST_Distance(lonlat, Point("1.2921502", "1.2921502")) as distance from shops  where ST_DWithin(lonlat, Point("2.2921502","2.2921502"), 400) 
+	
+ERROR:  column "1.2921502" does not exist at character 47
+STATEMENT:  select ST_Distance(lonlat, Point('1.2921502', "1.2921502")) as distance from shops  where ST_DWithin(lonlat, Point("2.2921502","2.2921502"), 400) 
+	
+ERROR:  function st_distance(geography, point) does not exist at character 8
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+STATEMENT:  select ST_Distance(lonlat, Point('1.2921502', '1.2921502')) as distance from shops  where ST_DWithin(lonlat, Point('2.2921502','2.2921502'), 400) 
+	
+ERROR:  function distance(geography, point) does not exist at character 8
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+STATEMENT:  select Distance(lonlat, Point('1.2921502', '1.2921502')) as distance from shops  where ST_DWithin(lonlat, Point('2.2921502','2.2921502'), 400) 
+	
+ERROR:  syntax error at or near ")" at character 134
+STATEMENT:  SELECT *, ST_Distance(lonlat, ST_MakePoint(NULL, NULL)) as distance FROM "shops" WHERE (ST_DWithin(lonlat, ST_MakePoint(NULL, NULL), )) ORDER BY distance ASC
+ERROR:  syntax error at or near ")" at character 166
+STATEMENT:  SELECT *, ST_Distance(lonlat, ST_MakePoint('103.8473175', '1.2921502')) as distance FROM "shops" WHERE (ST_DWithin(lonlat, ST_MakePoint('103.8473175', '1.2921502'), )) ORDER BY distance ASC
+ERROR:  syntax error at or near ")" at character 134
+STATEMENT:  SELECT *, ST_Distance(lonlat, ST_MakePoint(NULL, NULL)) as distance FROM "shops" WHERE (ST_DWithin(lonlat, ST_MakePoint(NULL, NULL), )) ORDER BY distance ASC
+ERROR:  syntax error at or near ")" at character 134
+STATEMENT:  SELECT *, ST_Distance(lonlat, ST_MakePoint(NULL, NULL)) as distance FROM "shops" WHERE (ST_DWithin(lonlat, ST_MakePoint(NULL, NULL), )) ORDER BY distance ASC
+FATAL:  database "ac_deployment_sample_development" does not exist
+FATAL:  database "ac_deployment_sample_development" does not exist
+FATAL:  database "ac_deployment_sample_development" does not exist
+FATAL:  database "ac_deployment_sample_development" does not exist
+FATAL:  database "ac_deployment_sample_development" does not exist
+FATAL:  database "ac_deployment_sample_development" does not exist
+ERROR:  syntax error at or near ")" at character 134
+STATEMENT:  SELECT *, ST_Distance(lonlat, ST_MakePoint(NULL, NULL)) as distance FROM "shops" WHERE (ST_DWithin(lonlat, ST_MakePoint(NULL, NULL), )) ORDER BY distance ASC
+ERROR:  syntax error at or near ")" at character 134
+STATEMENT:  SELECT *, ST_Distance(lonlat, ST_MakePoint(NULL, NULL)) as distance FROM "shops" WHERE (ST_DWithin(lonlat, ST_MakePoint(NULL, NULL), )) ORDER BY distance ASC

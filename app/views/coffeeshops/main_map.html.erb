@@ -1,0 +1,89 @@
+<div class="container-fluid header-bg" id="intro">  <!-- Intro container -->
+  <div class="row t-b-pad"> <!-- row -->
+
+    <div class="col-md-12 text-center"> <!-- col -->
+    <%= image_tag "cafe-big.png", :class => "text-center", :width => 69, :height => 75 %>
+    </div> <!-- /col -->
+
+    <div class="col-xs-12"> <!-- col -->
+      <h1 class="jumbo-head-text text-center">Find the Ideal <span class="bold-text">Cafe</span><span class="jumbo-head-text"> Near You</span>
+      </h1>
+    </div> <!-- /col -->
+
+    <div class="col-xs-6 col-xs-offset-3 col-md-6 col-md-offset-3"> <!-- col -->
+      <h3 class="jumbo-reg-text text-center">Discovering the ideal cafe that is suitable for your needs can now be faster and more accurate
+      </h3>
+    </div> <!-- /col -->
+  </div> <!-- /row -->
+
+  <div class="row"> <!-- row -->
+    <div class="col-xs-12 text-center"> <!-- col -->
+      <%= image_tag "google.png", :width => 200, :height => 60 %>
+      <%= image_tag "apple.png", :width => 200, :height => 60 %>
+    </div> <!-- /col -->
+  </div> <!-- /row -->
+</div> <!-- /container-fluid -->
+  <div style="position: absolute; top: 750px; z-index: 1; left:80% ;height:150px;width:160px;background-color:black; color:white;"">
+    
+    <div>
+    <input type="range" min="0" max="60" value="20" step="3" />
+    </div>
+    
+    <table style= "width: 100%">
+    <tr>
+    <td style="padding: 0 10px 0 10px">
+    <label>Wifi  </label>
+    </td>  
+    
+    <td style="padding: 0 10px 0 10px"><input id="type_wifi1" name="type_wifi1" type="checkbox" style="text-align:center" onchange="filterMarkersWifi(this.checked);" /></td>
+    </tr>
+
+
+     <tr>
+    <td style="padding: 0 10px 0 10px"><label>Power Plug</label></td>
+    <td style="padding: 0 10px 0 10px"><input id="type_power_outlet" name="type_power_outlet" type="checkbox" style="text-align:center" onchange="filterMarkersPower_Outlet(this.checked);" /></td>
+
+    </tr>
+    <tr>
+    <td style="padding: 0 10px 0 10px"><label>New Cafes</label></td>
+    <td style="padding: 0 10px 0 10px"><input id="type_newcafes_outlet" name="type_newcafes_outlet" type="checkbox" style="text-align:center" onchange="filterMarkersNew_Cafes(this.checked);" /></td>
+    </tr>
+
+    <tr>
+    <td style="padding: 0 10px 0 10px"><label>Trending</label></td>
+    <td style="padding: 0 10px 0 10px"><input id="type_newcafes_outlet" name="type_newcafes_outlet" type="checkbox" style="text-align:center" onchange="   filterMarkersTrend(this.checked);" /></td>
+    </tr>
+    
+
+    </table>
+  
+  </div>
+
+  
+
+   <div class="container-fluid">  <!-- Intro container -->
+  <div class="row"> <!-- row -->
+    <div class="col-xs-12"> <!-- col -->
+      <div id="map"></div> <!-- /col -->
+    </div>
+  </div> <!-- /row -->
+</div>
+  
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0x5pciXvFOMZFN7oyW9puomqyL8qBGZc&libraries=places&callback=initMap" async defer></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" id="jquery"></script>
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 
+<div class="container-fluid signup-bg">  <!-- Intro container -->
+  <div class="row "> <!-- row -->
+    <div class="col-xs-12"> <!-- col -->
+
+    </div> <!-- /col -->
+  </div> <!-- /row -->
+</div> <!-- /container-fluid -->
+
+    
+    <!--
+    <script src="https://maps.googleapis.com/maps/apijs?key=AIzaSyB0x5pciXvFOMZFN7oyW9puomqyL8qBGZc&libraries=places&callback=initMap" async defer></script>
+    -->
+</html>

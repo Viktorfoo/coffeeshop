@@ -1,0 +1,210 @@
+// Place all the styles related to the coffeeshops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto';
+
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  padding-top: 70px;
+}
+
+.t-b-pad {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+
+.links a:link, .links a:visited, .links a:hover, .links a:active, { 
+  text-decoration: none;
+  color: #000000;
+}
+
+.alert {
+  padding: 15px;
+  margin: 0 !important;
+  border: none;
+}
+
+
+
+.navbar {
+  min-height: 70px;
+  margin: 0 !important;
+  border: none;
+}
+
+.nav-bg {
+	background: rgba(0,0,0,0.8);
+  border: none;
+}
+
+.brand > img {
+  width: 50px;
+  margin-top: 4px;
+}
+
+.nav-item {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 100;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.nav .navbar-nav {
+  > .dropdown {
+  margin-top: 2px;
+  }
+}
+
+
+.navbar-default .navbar-nav > li > a {
+  line-height: 13px;
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn {
+  display: inline-block;
+  background-image: none;
+  background: #ccc;
+  font-weight: 100;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-color: #545454;
+  white-space: nowrap;
+  padding: 0;
+  font-size: 14px;
+  line-height: normal;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dropdown-menu {
+	text-align: center;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  min-height: 70px;
+  background: rgba(0,0,0,0);
+  color: #ffffff;
+}
+
+
+
+.header-bg {
+  height: 600px;
+  background: url("https://cdn.pbrd.co/images/RsYSgjKN.png");
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+
+.jumbo-head-text {
+  font-size: 48px;
+  font-weight: 100;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.jumbo-bold-text {
+  font-weight: bold;
+  z-index: 1;
+}
+
+.jumbo-reg-text {
+  font-size: 28px;
+  font-weight: 100;
+  color: #ffffff;
+  z-index: 2;
+}
+
+
+
+// Always set the map height explicitly to define the size of the div
+//element that contains the map.
+// Optional: Makes the sample page fill the window.
+
+#map {
+margin: 0;
+padding: 0;
+height: 600px;
+}
+
+
+
+.signup-bg {
+  height: 600px;
+  background: url("https://cdn.pbrd.co/images/8d0Q2I5K2.jpg");
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+
+.tint {
+  background-color: rgba(143,149,153,0.73);
+}
+
+
+
+.head-text {
+  font-weight: 100;
+  color: #152844;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.reg-text {
+  font-weight: 100;
+  color: #849eb0;
+}
+
+
+
+.item-wrapper {
+  height: 200px;
+  overflow: hidden;
+ 
+
+  border: 1px solid transparent;
+  border-color: #c2c2c2;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+
+

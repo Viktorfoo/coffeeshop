@@ -1,0 +1,51 @@
+
+<html>
+  <head>
+    <title>Place searches</title>
+    <h1>Main Map 1</h1>
+    <div id="map-wifi" align="center">Wifi:
+    <select id="type_wifi" onchange="filterMarkers(this.value);" align="center">
+    <option value="no">No</option>      
+    <option value="yes">Yes</option>
+    </select>
+    </div>
+     <div id="map-wifi1">
+    <label>Wifi</label>       
+    <input id="type_wifi1" name="type_wifi1" type="checkbox" onchange="filterMarkersWifi(this.checked);" />
+    </div>
+    <div id="map-power_outlet">
+    <label>Power Outlet</label>       
+    <input id="type_power_outlet" name="type_power_outlet" type="checkbox" onchange="filterMarkersPower_Outlet(this.checked);" />
+    </div>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 80%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0x5pciXvFOMZFN7oyW9puomqyL8qBGZc&libraries=places&callback=initMap" async defer></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" id="jquery"></script>
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 
+
+    
+    <!--
+    <script src="https://maps.googleapis.com/maps/apijs?key=AIzaSyB0x5pciXvFOMZFN7oyW9puomqyL8qBGZc&libraries=places&callback=initMap" async defer></script>
+    -->
+  </body>
+</html>
