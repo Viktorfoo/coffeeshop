@@ -59,7 +59,8 @@ class CoffeeshopsController < ApplicationController
     param_lat = params[:lat]
     param_lon = params[:lon]
     param_distance = params[:distance]
-    shops = Shop.find_within(param_lon, param_lat, param_distance)      
+    shops = Shop.find_within(param_lon, param_lat, param_distance)
+    render text: shops.map { |shop| shop.api_representation }      
   end
 
   def update4square
