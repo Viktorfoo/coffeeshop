@@ -45,16 +45,18 @@ class CoffeeshopsController < ApplicationController
       render json: shop
   end
   
-  def show4square
+  def show4square_bk
+
   	param_lat = params[:lat]
   	param_lon = params[:lon]
   	param_distance = params[:distance]
-	#shop_search = Shop.find_within(1.2921502, 103.8473175, 200)
-	shops = Shop.find_within(param_lon, param_lat, param_distance)
-	render json: shops.map { |shop| shop.api_representation }
-	#render json: shops
+	  shops = Shop.find_within(param_lon, param_lat, param_distance)
+	  render json: shops.map { |shop| shop.api_representation }
   
-  #render text: param_lat
+  end
+
+  def show4square
+    
   end
 
   def update4square
