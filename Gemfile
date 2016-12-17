@@ -8,7 +8,7 @@ gem 'activerecord-postgis-adapter'
 gem 'rgl'
 gem 'httparty'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 gem 'pg'
 gem 'devise'
 # Use Puma as the app server
