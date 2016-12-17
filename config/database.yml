@@ -29,7 +29,7 @@ production:
   database: coffeeshop
   username: victorfoo
   password: <%= ENV['KOPI_DATABASE_PASSWORD'] %>
-
+  url: <%= ENV['DATABASE_URL'].sub(/^postgres/, "postgis") %>
 
 
 
