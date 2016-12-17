@@ -56,7 +56,10 @@ class CoffeeshopsController < ApplicationController
   end
 
   def show4square
-    
+    param_lat = params[:lat]
+    param_lon = params[:lon]
+    param_distance = params[:distance]
+    shops = Shop.find_within(param_lon, param_lat, param_distance)      
   end
 
   def update4square
