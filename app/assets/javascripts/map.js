@@ -49,8 +49,9 @@
 
 
       function callback(results, status) {
-          $.ajax({url:'http://localhost:3000/coffeeshop/show4square?lat=103.8473175&lon=1.2921502&distance=1000', success: createMarker4Square});
-        
+         // $.ajax({url:'http://localhost:3000/coffeeshop/show4square?lat=103.8473175&lon=1.2921502&distance=1000', success: createMarker4Square});
+        $.ajax({url:'show4square?lat=103.8473175&lon=1.2921502&distance=1000', success: createMarker4Square});
+         
       }
 
       function createMarker_bk(place) {
