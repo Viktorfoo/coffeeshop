@@ -27,8 +27,6 @@ test:
 production:
   <<: *default
   database: coffeeshop
-  encoding: unicode        # default is public
-  pool: 5  
   username: victorfoo
   password: <%= ENV['KOPI_DATABASE_PASSWORD'] %>
 
