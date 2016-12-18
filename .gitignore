@@ -16,7 +16,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-/config/locales/secrets.yml
+/config/ecrets.yml
 
 # Ignore Byebug command history file.
 .byebug_history
