@@ -21,7 +21,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to image_tag("cafe-small.png", size: "55x42"), controller: "coffeeshops",action: "main_map" %>
+      <%= link_to image_tag("cafe-small.png", size: "60x75", class: "smallcafe"), controller: "coffeeshops",action: "main_map" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,9 +53,9 @@
 
     <!-- Flash Messages -->
     <%= yield %>
-    <p class="notice"><%= notice %></p>
+   <!-- <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    
+    -->    
     <!-- yield Google Map Places library here to sit at the bottom -->
     <!-- reference shops/index.html.erb -->
     <%= yield :jscript %>
