@@ -19,6 +19,7 @@
       var gmarker1new_cafe_status = "false"
       var gmarker1trend_status = "false"
       var gmarker1low_crowd_status = "false"
+      var filterall = "false"
 
 
       function initMap() {
@@ -336,11 +337,6 @@
         }    
           
       }
-
-         var gmarker1wifi = new Array();
-      var gmarker1power_outlet = new Array();
-      var gmarker1new_cafe = new Array();
-      var gmarker1trend = new Array();
 
 
 
