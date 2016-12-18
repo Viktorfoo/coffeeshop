@@ -13,7 +13,10 @@ development:
   <<: *default
   database: coffeeshop_dev
   username: victorfoo
-  password: <%= ENV['KOPI_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  password: 
+  host: localhost
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,15 +25,16 @@ test:
   <<: *default
   database: coffeeshop_test
   username: victorfoo
-  password: <%= ENV['KOPI_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  password:
+  host: localhost
 
 production:
   <<: *default
   database: coffeeshop
   username: victorfoo
-  password: <%= ENV['KOPI_DATABASE_PASSWORD'] %>
-  url: <%= ENV['DATABASE_URL'].sub(/^postgres/, "postgis") %>
-
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  url: <%= ENV.fetch('DATABASE_URL', '').sub(/^postgres/, "postgis") %>
 
 
 

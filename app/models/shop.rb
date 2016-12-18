@@ -15,8 +15,7 @@ class Shop < ApplicationRecord
         id: id,
         power_outlet: power_outlet,                                                           
         new_cafe: new_cafe,                                                             
-        trending: trending,                                                              
-        crowd: crowd 
+        trending: trending
     }
     end	
 

@@ -12,6 +12,13 @@
       var gmarker1power_outlet = new Array();
       var gmarker1new_cafe = new Array();
       var gmarker1trend = new Array();
+      var gmarker1low_crowd = new Array();
+
+      var gmarker1wifi_status = "false"
+      var gmarker1power_outlet_status = "false"
+      var gmarker1new_cafe_status = "false"
+      var gmarker1trend_status = "false"
+      var gmarker1low_crowd_status = "false"
 
 
       function initMap() {
@@ -89,6 +96,7 @@
           gmarker1power_outlet.push(place.power_outlet);
           gmarker1new_cafe.push(place.new_cafe);
           gmarker1trend.push(place.trending)
+          gmarker1low_crowd.push(place.low_crowd)
 
 
         //}
@@ -97,11 +105,18 @@
       
       filterMarkersWifi = function (filtermarker)
       {
+
+          //gmarker1wifi_status
+          //gmarker1power_outlet_status
+          //gmarker1new_cafe_status
+          //gmarker1trend_status
           //alert("1 " + gmarker1.length);
           console.log("Filter " + filtermarker);
 
           if (filtermarker ==true)
-          {  
+          { 
+            gmarker1wifi_status = true
+
             console.log("Check is true ");
            for (var i = 0; i < gmarker1.length; i++) {
             
@@ -121,6 +136,56 @@
         }
         else
         {
+          gmarker1wifi_status =false
+
+          for (var i = 0; i < gmarker1.length; i++) {
+           
+              
+              gmarker1[i].setVisible(true)        
+            
+
+
+          }
+
+        }
+          
+      }
+
+      filterMarkersWifi_1 = function (filtermarker)
+      {
+
+          //gmarker1wifi_status
+          //gmarker1power_outlet_status
+          //gmarker1new_cafe_status
+          //gmarker1trend_status
+          //alert("1 " + gmarker1.length);
+          console.log("Filter " + filtermarker);
+
+          if (filtermarker ==true)
+          { 
+            gmarker1wifi_status = true
+
+            console.log("Check is true ");
+           for (var i = 0; i < gmarker1.length; i++) {
+            
+            if (gmarker1wifi[i] == true) 
+            {
+                          
+              gmarker1[i].setVisible(true)        
+            }
+            else
+            {
+            
+              gmarker1[i].setVisible(false)
+            }
+
+
+          }
+        }
+        else
+        {
+          gmarker1wifi_status =false
+
           for (var i = 0; i < gmarker1.length; i++) {
            
               
@@ -240,20 +305,42 @@
         else
         {
           for (var i = 0; i < gmarker1.length; i++) {
-           
-              
+        
               gmarker1[i].setVisible(true)        
-            
-
 
           }
 
         }
-          
+
       }
 
 
+      filterAll = function ()
+      {
+          
+        for (var i = 0; i < gmarker1.length; i++) 
+        {
+            
+          if (gmarker1trend[i] == true ) 
+          {
+                          
+            gmarker1[i].setVisible(true)        
+          }
+          else
+          {
+            
+            gmarker1[i].setVisible(false)
+          }
 
+
+        }    
+          
+      }
+
+         var gmarker1wifi = new Array();
+      var gmarker1power_outlet = new Array();
+      var gmarker1new_cafe = new Array();
+      var gmarker1trend = new Array();
 
 
 
