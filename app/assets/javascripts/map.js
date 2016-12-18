@@ -19,7 +19,8 @@
       var gmarker1new_cafe_status = "false"
       var gmarker1trend_status = "false"
       var gmarker1low_crowd_status = "false"
-      var filterall = "false"
+      var filterall1 = "false"
+
 
 
       function initMap() {
