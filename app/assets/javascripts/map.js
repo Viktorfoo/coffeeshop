@@ -316,6 +316,42 @@
 
       }
 
+      filterMarkersLowCrowd = function (filtermarker)
+      {
+          //alert("1 " + gmarker1.length);
+          console.log("Low Crowd " + filtermarker);
+
+          if (filtermarker ==true)
+          {  
+            console.log("Low Crowd is True ");
+           for (var i = 0; i < gmarker1.length; i++) {
+            
+            if (gmarker1low_crowd_status[i] == true) 
+            {
+                          
+              gmarker1[i].setVisible(true)        
+            }
+            else
+            {
+            
+              gmarker1[i].setVisible(false)
+            }
+
+
+          }
+        }
+        else
+        {
+          for (var i = 0; i < gmarker1.length; i++) {
+        
+              gmarker1[i].setVisible(true)        
+
+          }
+
+        }
+
+      }
+
 
       filterAll = function ()
       {

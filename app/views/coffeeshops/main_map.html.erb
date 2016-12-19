@@ -25,11 +25,19 @@
 </div> <!-- /container-fluid -->
   <div style="position: absolute; top: 750px; z-index: 1; left:80% ;height:150px;width:160px;background-color:black; color:white;"">
     
-    <div>
+    <!--<div>
     <input type="range" min="0" max="60" value="20" step="3" />
-    </div>
+    </div>-->
     
     <table style= "width: 100%">
+    <tr>
+    <td style="padding: 10px 10px 0 10px">
+    <label>Low Crowd  </label>
+    </td>  
+    
+    <td style="padding: 0 10px 0 10px"><input id="type_lowcrowd1" name="type_lowcrowd1" type="checkbox" style="text-align:center" onchange="filterMarkersLowCrowd(this.checked);" /></td>
+    </tr>
+
     <tr>
     <td style="padding: 0 10px 0 10px">
     <label>Wifi  </label>
@@ -69,7 +77,7 @@
   </div> <!-- /row -->
 </div>
   
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0x5pciXvFOMZFN7oyW9puomqyL8qBGZc&libraries=places&callback=initMap" async defer></script>
+
     <!-- Below are normal ajax call
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" id="jquery"></script>
   
@@ -77,14 +85,23 @@
    -->
  
 <div class="container-fluid signup-bg">  <!-- Intro container -->
-  <div class="row "> <!-- row -->
-    <div class="col-xs-12"> <!-- col -->
-
-    </div> <!-- /col -->
+  
+   
+  <div class="signupform-containerall"> <!-- row -->
+  <h2 class="SignUpText">Sign Up</h2>
+    <div class="signupform-container">
+      <%= image_tag "signInFB.png", :width => 200, :height => "auto"%>
+    </div>
+    <div class="signupform-container">  
+      <%= image_tag "signInGoogle.png",  :width => 200, :height => "auto"  %>
+    </div>
+    <div class="signupform-container">
+      <%= image_tag "signMeUp.png",:width => 200, :height => "auto"  %>
+    </div>
   </div> <!-- /row -->
 </div> <!-- /container-fluid -->
 
-    
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0x5pciXvFOMZFN7oyW9puomqyL8qBGZc&libraries=places&callback=initMap" async defer></script>
     <!--
     <script src="https://maps.googleapis.com/maps/apijs?key=AIzaSyB0x5pciXvFOMZFN7oyW9puomqyL8qBGZc&libraries=places&callback=initMap" async defer></script>
     -->
