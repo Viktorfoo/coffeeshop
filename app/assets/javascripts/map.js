@@ -97,8 +97,8 @@
           gmarker1wifi.push(place.wifi);
           gmarker1power_outlet.push(place.power_outlet);
           gmarker1new_cafe.push(place.new_cafe);
-          gmarker1trend.push(place.trending)
-          gmarker1low_crowd.push(place.low_crowd)
+          gmarker1trend.push(place.trending);
+          gmarker1low_crowd.push(place.crowd.toString());
 
 
         //}
@@ -326,13 +326,15 @@
             console.log("Low Crowd is True ");
            for (var i = 0; i < gmarker1.length; i++) {
             
-            if (gmarker1low_crowd_status[i] == true) 
+
+            if (gmarker1low_crowd_status[i] > 0) 
             {
-                          
+              console.log("Crowd Status True" + gmarker1low_crowd_status[i].toString());                          
               gmarker1[i].setVisible(true)        
             }
             else
             {
+              console.log("Crowd Status False " + gmarker1low_crowd_status[i].toString());  
             
               gmarker1[i].setVisible(false)
             }
