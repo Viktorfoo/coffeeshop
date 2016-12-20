@@ -75,6 +75,14 @@ body {
   }
 }
 
+.nav-item li:hover {
+  background-color: #FFD464;
+  opacity: 0.9;
+  border-radius: 8px;
+  
+}
+
+
 
 .navbar-default .navbar-nav > li > a {
   line-height: 13px;

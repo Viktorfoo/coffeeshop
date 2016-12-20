@@ -18,6 +18,8 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 
 
@@ -249,12 +251,22 @@ height: 600px;
   font-weight: 100px;
   z-index: 3;
   color: #FFD464; 
-    margin: 0 auto;
-width: 190px;
+  margin: 0 auto;
+  width: 190px;
 }
 
 .map-container {
   border: 3px solid black;
+}
+.filterpanel
+{
+  font-size: 16px;
+}
+
+.fa
+{
+  //padding: 0px 0px 0px 0px;
+  color: #FFD464;
 }
 
 
