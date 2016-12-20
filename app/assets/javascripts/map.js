@@ -118,7 +118,7 @@
 
           position: pyrmont,
           //content: '<i class="fa fa-map-pin" aria-hidden="true"></i>',
-          icon: "/assets/map_pin.png",        
+          //icon: "/assets/map_pin.png",        
           map: map
           
    
