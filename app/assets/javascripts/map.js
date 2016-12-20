@@ -28,7 +28,6 @@
         //it gets your current geolocation coordinates
         navigator.geolocation.getCurrentPosition(showPosition);
         //navigator.geolocation.getCurrentPosition(showPosition);
-        
 
 
       }
@@ -41,7 +40,35 @@
         map = new google.maps.Map(document.getElementById('map'), {
           center: pyrmont,
           scrollwheel: false,
-          zoom: 15       
+           styles: [
+              {
+                featureType : "poi.place_of_worship",
+                elementType: "labels",
+                stylers: [
+                  { visibility: "off" }
+                ]
+              },
+              {
+                featureType : "poi.attraction",
+                elementType: "labels",
+                stylers: [
+                  { visibility: "off" }
+                ]
+              }
+            ], 
+          zoom: 15      
+        });
+
+        var pyrmont = {lat: 1.2921502, lng: 103.8473175};
+        
+        var marker = new google.maps.Marker({
+
+          position: pyrmont,
+          //content: '<i class="fa fa-map-pin" aria-hidden="true"></i>',      
+          icon: "/assets/cafe-small.png",
+          map: map
+          
+   
         });
 
         infowindow = new google.maps.InfoWindow();
@@ -60,6 +87,7 @@
       function callback(results, status) {
          // $.ajax({url:'http://localhost:3000/coffeeshop/show4square?lat=103.8473175&lon=1.2921502&distance=1000', success: createMarker4Square});
         $.ajax({url:'show4square?lat=103.8473175&lon=1.2921502&distance=1000', success: createMarker4Square});
+      
          
       }
 
@@ -83,13 +111,22 @@
         //var placeLoc = {lat: 1.2921502 ,lng: 103.8473175};
         //testVar = pyrmont
         //if(place.wifi == 0){
+    
         var pyrmont = new google.maps.LatLng(place.latitude,place.longitude);
+        
         var marker = new google.maps.Marker({
-          map: map,
-          position: pyrmont
-        });
 
+          position: pyrmont,
+          //content: '<i class="fa fa-map-pin" aria-hidden="true"></i>',
+          icon: "/assets/map_pin.png",        
+          map: map
           
+   
+        });
+   //map: map,
+  //icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+    //icon: '/assets/cafe-small.png', 
+
           google.maps.event.addListener(marker, 'click', function() {
             handleClickMarker(place.name, this);
           });
@@ -375,6 +412,27 @@
 
         }    
           
+      }
+      filterMarkersReset =function()
+      {
+        gmarker1wifi_status = "false"
+        gmarker1power_outlet_status = "false"
+        gmarker1new_cafe_status = "false"
+        gmarker1trend_status = "false"
+        gmarker1low_crowd_status = "false" 
+        document.getElementById('type_lowcrowd1').checked=false;
+        document.getElementById('type_wifi1').checked=false;
+        document.getElementById('type_power_outlet').checked=false;
+        document.getElementById('type_newcafes_outlet').checked=false;
+        document.getElementById('type_trend').checked=false;
+        
+        
+        for (var i = 0; i < gmarker1.length; i++) 
+        {
+                                              
+            gmarker1[i].setVisible(true);
+                 
+        } 
       }
 
 

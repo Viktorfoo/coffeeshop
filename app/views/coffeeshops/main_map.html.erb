@@ -23,7 +23,7 @@
     </div> <!-- /col -->
   </div> <!-- /row -->
 </div> <!-- /container-fluid -->
-  <div style="position: absolute; top: 750px; z-index: 1; left:80% ;height:180px;width:160px;background-color:black; color:white;"">
+  <div class="filtertable">
     
     <!--<div>
     <input type="range" min="0" max="60" value="20" step="3" />
@@ -31,39 +31,42 @@
     
     <table style= "width: 100%">
     <tr>
-    <td style="padding: 10px 10px 0px 10px">
-    <label class="filterpanel">Filter Panel</label>
-    </td>  
+    <td style="padding: 10px 0px 0px 10px">
+    <label class="filterpanel filterborder">Filter Panel</label>
+    </td> 
+    <td style="padding: 14px 10px 0px 0px">
+      <button class="filterpanel2 filterborder buttonreset" onclick="filterMarkersReset();">Reset</button>
+    </td> 
     <tr>
-    
-    <td style="padding: 10px 10px 0 10px">
-    <i class="fa fa-users" aria-hidden="true"></i><label>Low Crowd</label>
+    <td style="padding: 10px 10px 0px 10px">
+    <i class="fa fa-users" aria-hidden="true"></i><label style="padding: 0 0px 5px 8px">Low Crowd</label>
     </td>  
     
-    <td style="padding: 0 10px 0 10px"><input id="type_lowcrowd1" name="type_lowcrowd1" type="checkbox" style="text-align:center" onchange="filterMarkersLowCrowd(this.checked);" /></td>
+    <td style="padding: 10px 0px 0px 10px"><input id="type_lowcrowd1" name="type_lowcrowd1" type="checkbox" style="text-align:center" onchange="filterMarkersLowCrowd(this.checked);" /></td>
     </tr>
 
     <tr>
-    <td style="padding: 0 10px 0 10px"><i class="fa fa-wifi" aria-hidden="true"></i><label>Wifi  </label>
+    <td style="padding: 0 10px 2px 10px"><i class="fa fa-wifi" aria-hidden="true"></i><label style="padding: 0px 0px 0px 8px">Wifi  </label>
     </td>  
     
-    <td style="padding: 0 10px 0 10px"><input id="type_wifi1" name="type_wifi1" type="checkbox" style="text-align:center" onchange="filterMarkersWifi(this.checked);" /></td>
+    <td style="padding: 0 10px 0px 10px"><input id="type_wifi1" name="type_wifi1" type="checkbox" style="text-align:center" onchange="filterMarkersWifi(this.checked);" /></td>
     </tr>
 
 
      <tr>
-    <td style="padding: 0 10px 0 10px"><i class="fa fa-plug" aria-hidden="true"></i><label>Power Plug</label></td>
-    <td style="padding: 0 10px 0 10px"><input id="type_power_outlet" name="type_power_outlet" type="checkbox" style="text-align:center" onchange="filterMarkersPower_Outlet(this.checked);" /></td>
+    <td style="padding: 0px 10px 2px 10px"><i class="fa fa-plug" aria-hidden="true"></i><label style="padding: 0px 0px 0px 8px">Power Plug</label></td>
+    <td style="padding: 0px 10px 0 10px"><input id="type_power_outlet" name="type_power_outlet" type="checkbox" style="text-align:center" onchange="filterMarkersPower_Outlet(this.checked);" /></td>
 
     </tr>
     <tr>
-    <td style="padding: 0 10px 0 10px"><i class="fa fa-certificate" aria-hidden="true"></i><label>New Cafes</label></td>
-    <td style="padding: 0 10px 0 10px"><input id="type_newcafes_outlet" name="type_newcafes_outlet" type="checkbox" style="text-align:center" onchange="filterMarkersNew_Cafes(this.checked);" /></td>
+    <td style="padding: 0px 8px 0 10px"><i class="fa fa-certificate" aria-hidden="true"></i>
+    <label style="padding: 0px 0px 2px 8px">New Cafes</label></td>
+    <td style="padding: 0px 10px 0 10px"><input id="type_newcafes_outlet" name="type_newcafes_outlet" type="checkbox" style="text-align:center" onchange="filterMarkersNew_Cafes(this.checked);" /></td>
     </tr>
 
     <tr>
-    <td style="padding: 0 10px 0 10px"><i class="fa fa-bolt" aria-hidden="true"></i><label>Trending</label></td>
-    <td style="padding: 0 10px 0 10px"><input id="type_newcafes_outlet" name="type_newcafes_outlet" type="checkbox" style="text-align:center" onchange="   filterMarkersTrend(this.checked);" /></td>
+    <td style="padding: 0 10px 2px 10px"><i class="fa fa-bolt" aria-hidden="true"></i><label style="padding: 0px 0px 0px 16px">Trending</label></td>
+    <td style="padding: 0 10px 0 10px"><input id="type_trend" name="type_trend" type="checkbox" style="text-align:center" onchange="   filterMarkersTrend(this.checked);" /></td>
     </tr>
     
 

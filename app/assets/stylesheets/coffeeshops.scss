@@ -26,7 +26,8 @@
 @import 'https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto';
 
 body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  //font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: "Roboto";
   background: #ffffff;
   padding-top: 90px;
 }
@@ -215,6 +216,7 @@ height: 600px;
   margin-top: 15px;
   margin-left: 15px;
 }
+
 .smallcafe
 {
   padding-top: 10px;
@@ -258,17 +260,58 @@ height: 600px;
 .map-container {
   border: 3px solid black;
 }
+
+.filtertable
+{
+  position: absolute; 
+  top: 750px; 
+  z-index: 1; 
+  left:80% ;
+  height:200px;
+  width:180px;
+  background-color:black; 
+  color:white; 
+  opacity: 0.8; 
+  border-radius: 8px;
+}
 .filterpanel
 {
   font-size: 16px;
 }
 
+.filterpanel2
+{
+  font-size: 10px;
+  padding: 0px 0px 5px 0px;
+}
 .fa
 {
   //padding: 0px 0px 0px 0px;
-  color: #FFD464;
+  color: #FFD464;;
 }
 
+.filterborder{
+  border-bottom: 1px solid #FFD464;
+  padding: 4px 0px 6px 0px;
+  width: 120%;
+}
+.filterborder2{
+  border-bottom: 1px solid #FFD464;
+  padding: 0px 0px 0px 0px;
+  width: 100%;
+}
+
+.buttonreset
+{
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid #FFD464;
+
+}
 
 
 
