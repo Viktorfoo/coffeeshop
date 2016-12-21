@@ -2,6 +2,7 @@
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+      //= require bootstrap2-toggle
 
       var map;
       var infowindow;
@@ -35,7 +36,8 @@
       function showPosition(position)
       {
         //var pyrmont = {lat: position.coords.latitude, lng: position.coords.longitude};
-        var pyrmont = {lat: 1.2921502, lng: 103.8473175};
+        var pyrmont = {lat: 1.290426, lng: 103.8474353};
+        //1.290426,103.8474353
         //Simple Google Map -- Creates a Google Map
         map = new google.maps.Map(document.getElementById('map'), {
           center: pyrmont,
@@ -59,13 +61,13 @@
           zoom: 15      
         });
 
-        var pyrmont = {lat: 1.2921502, lng: 103.8473175};
+        var pyrmont = {lat: 1.290426, lng: 103.8494353};
         
         var marker = new google.maps.Marker({
 
           position: pyrmont,
           //content: '<i class="fa fa-map-pin" aria-hidden="true"></i>',      
-          icon: "/assets/cafe-small.png",
+          icon: "/assets/current_pin.png",
           map: map
           
    
@@ -86,8 +88,7 @@
 
       function callback(results, status) {
          // $.ajax({url:'http://localhost:3000/coffeeshop/show4square?lat=103.8473175&lon=1.2921502&distance=1000', success: createMarker4Square});
-        $.ajax({url:'show4square?lat=103.8473175&lon=1.2921502&distance=1000', success: createMarker4Square});
-      
+        $.ajax({url:'show4square?lat=103.8474353&lon=1.290426&distance=1000', success: createMarker4Square});
          
       }
 
@@ -128,6 +129,7 @@
     //icon: '/assets/cafe-small.png', 
 
           google.maps.event.addListener(marker, 'click', function() {
+            window.location.href = 'http://localhost:3000/coffeeshop/main_map#signuppage'
             handleClickMarker(place.name, this);
           });
           gmarker1.push(marker);
@@ -420,11 +422,16 @@
         gmarker1new_cafe_status = "false"
         gmarker1trend_status = "false"
         gmarker1low_crowd_status = "false" 
-        document.getElementById('type_lowcrowd1').checked=false;
-        document.getElementById('type_wifi1').checked=false;
-        document.getElementById('type_power_outlet').checked=false;
-        document.getElementById('type_newcafes_outlet').checked=false;
-        document.getElementById('type_trend').checked=false;
+        $('#type_lowcrowd1').bootstrapToggle('off');
+         $('#type_wifi1').bootstrapToggle('off');
+          $('#type_power_outlet').bootstrapToggle('off');
+           $('#type_newcafes_outlet').bootstrapToggle('off');
+            $('#type_trend').bootstrapToggle('off');
+        //document.getElementById('type_lowcrowd1').checked=false;
+       // document.getElementById('type_wifi1').checked=false;
+        //document.getElementById('type_power_outlet').checked=false;
+        //document.getElementById('type_newcafes_outlet').checked=false;
+        //document.getElementById('type_trend').checked=false;
         
         
         for (var i = 0; i < gmarker1.length; i++) 
@@ -451,7 +458,34 @@
 
       function handleClickMarker(placeName, objThis)
       {
-        infowindow.setContent("<h3>No Plug</h3><img src='http://www.thisiscolossal.com/wp-content/uploads/2014/03/130407.gif' width='20px' /><br/>" + placeName);
+        //gooinfowindow.setContent("<h3>No Plug</h3><img src='http://www.thisiscolossal.com/wp-content/uploads/2014/03/130407.gif' width='20px' /><br/>" + placeName);
           //infowindow.setContent("Map");
-          infowindow.open(map, objThis);
+        //infowindow.open(map, objThis);
+        show('popup2');
       }
+
+
+    var show = function(id) {
+    document.getElementById(id).style.display ='block';
+    }
+    var hide = function(id) {
+    document.getElementById(id).style.display ='none';
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

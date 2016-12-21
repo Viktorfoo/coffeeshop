@@ -15,13 +15,12 @@
  *
  *= require_tree .
  *= require_self
+*= require bootstrap2-toggle
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
-
 
 @import 'https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto';
 
@@ -29,7 +28,7 @@ body {
   //font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-family: "Roboto";
   background: #ffffff;
-  padding-top: 90px;
+  //padding-top: 90px;
 }
 
 .t-b-pad {
@@ -92,28 +91,6 @@ body {
   color: #ffffff;
 }
 
-.btn {
-  display: inline-block;
-  background-image: none;
-  background: #ccc;
-  font-weight: 100;
-  text-align: center;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  border: 1px solid transparent;
-  border-color: #545454;
-  white-space: nowrap;
-  padding: 0;
-  font-size: 14px;
-  line-height: normal;
-  border-radius: 8px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
 .dropdown-menu {
 	text-align: center;
@@ -125,6 +102,29 @@ body {
   color: #ffffff;
 }
 
+
+.btn12 {
+  display: inline-block;
+  background-image: none;
+  background: #007FFF;
+  font-weight: 20;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-color: #545454;
+  white-space: nowrap;
+  padding: 0;
+  font-size: 0px;
+  line-height: normal;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 
 .header-bg {
@@ -152,6 +152,13 @@ body {
   font-weight: 100;
   color: #ffffff;
   z-index: 2;
+}
+.titlesubtext{
+  font-size: 18px;
+  //padding: 0 20px 20px 20px;
+  color: #FFF;
+  text-align: center;
+  width: 450px;
 }
 
 
@@ -186,7 +193,7 @@ height: 600px;
   height: 100%;
   background: black;
   opacity: 0.4;
-  z-index: 0;
+  z-index: -10;
 }
 
 .tint {
@@ -237,9 +244,10 @@ height: 600px;
 }
 
 .signupform-containerall {
-  //width: 190px;
+  //width: 100px;
   postition: relative;
-  padding: 250px 0px 0px 0px;
+  padding: 150px 0px 0px 0px;
+   z-index: 200;
 }
 
 .signupforms
@@ -249,12 +257,12 @@ height: 600px;
 .SignUpText
 {
   //text-align: center;
-  font-size: 48px;
-  font-weight: 100px;
-  z-index: 3;
+  font-size: 38px;
+  //font-weight: 100px;
+ padding: 0 0 0 25px;
   color: #FFD464; 
   margin: 0 auto;
-  width: 190px;
+  width: 300px;
 }
 
 .map-container {
@@ -264,7 +272,7 @@ height: 600px;
 .filtertable
 {
   position: absolute; 
-  top: 750px; 
+  top: 820px; 
   z-index: 1; 
   left:80% ;
   height:200px;
@@ -291,12 +299,12 @@ height: 600px;
 }
 
 .filterborder{
-  border-bottom: 1px solid #FFD464;
+  border-bottom: 1px solid #FFFFFF;
   padding: 4px 0px 6px 0px;
   width: 120%;
 }
 .filterborder2{
-  border-bottom: 1px solid #FFD464;
+  border-bottom: 1px solid #FFFFFF;;
   padding: 0px 0px 0px 0px;
   width: 100%;
 }
@@ -309,11 +317,96 @@ height: 600px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border-bottom: 1px solid #FFD464;
+    border-bottom: 1px solid #FFFFFF;
 
 }
+.popup {
+  display: none;
+  position: fixed;
+  padding: 0px;
+  width: 100%;
+  left: 15%;
+  margin-left: -150px;
+  //height: 180px;
+  height: 100%;
+  top: 40%;
+  margin-top: -100px;
+  background: black;
+  opacity: 0.8;
+  z-index: 20;
+}
+#popup2:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+}
 
+#popup2:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+  z-index: -1;
+}
 
+a,
+a:visited {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.popup a,
+.popup a:visited {
+  //color: #1abc9c;
+  color: #FFD464;
+}
+
+p {
+  margin: 1em 0;
+}
+
+p+p+p {
+  font-size: 60%;
+}
+.signupmoretext{
+  font-size: 38px;
+  padding: 30px 20px 0px 20px;
+  color: #FFF; 
+}
+.signupmoretext1{
+  font-size: 38px;
+  padding: 0 20px 20px 20px;
+  color: #FFF; 
+}
+.signuppage
+{
+  padding: 10px;
+  font-size: 28px;
+  color: #FFD464; 
+}
+
+.fa-chevron-down
+{
+  
+  padding: 10% 0px 0px 0px; 
+ 
+}
 
 
 
