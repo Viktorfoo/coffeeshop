@@ -134,7 +134,7 @@
     //icon: '/assets/cafe-small.png', 
 
           google.maps.event.addListener(marker, 'click', function() {
-            window.location.href = '/main_map#signuppage'
+            window.location.href = 'main_map#signuppage'
             handleClickMarker(place.name, this);
           });
           gmarker1.push(marker);
