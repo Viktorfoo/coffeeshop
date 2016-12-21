@@ -42,6 +42,10 @@
         map = new google.maps.Map(document.getElementById('map'), {
           center: pyrmont,
           scrollwheel: false,
+          streetViewControl: false,
+          zoomControl: {
+              buttonSize: "62"
+          },       
            styles: [
               {
                 featureType : "poi.place_of_worship",
@@ -119,7 +123,8 @@
 
           position: pyrmont,
           //content: '<i class="fa fa-map-pin" aria-hidden="true"></i>',
-          icon: "/assets/map_pin.png",        
+          icon: "/assets/map_pin.png",
+
           map: map
           
    
@@ -129,7 +134,7 @@
     //icon: '/assets/cafe-small.png', 
 
           google.maps.event.addListener(marker, 'click', function() {
-            window.location.href = 'http://localhost:3000/coffeeshop/main_map#signuppage'
+            window.location.href = '/main_map#signuppage'
             handleClickMarker(place.name, this);
           });
           gmarker1.push(marker);
