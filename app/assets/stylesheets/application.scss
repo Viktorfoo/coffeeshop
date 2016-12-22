@@ -24,7 +24,7 @@
 
 body {
   //font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-family: "Roboto";
+  font-family: "Roboto-Light";
   background: #ffffff;
   //padding-top: 70px;
 }
@@ -67,7 +67,7 @@ body {
 .nav-item {
   display: inline-block;
   font-size: 14px;
-  font-weight: 100;
+  font-weight: lighter;
   margin-top: 8px;
   margin-right: 10px;
 }
@@ -97,7 +97,7 @@ body {
   color: #ffffff;
 }
 
-.btn {
+.btn123{
   display: inline-block;
   background-image: none;
   background: #ccc;
@@ -140,15 +140,16 @@ body {
   z-index: -1;
 }
 
+
 .jumbo-head-text {
   font-size: 48px;
-  font-weight: 100;
+  font-weight: lighter;
   color: #ffffff;
   z-index: 2;
 }
 
 .jumbo-bold-text {
-  font-weight: bold;
+  //font-weight: bold;
   z-index: 1;
 }
 
@@ -158,7 +159,6 @@ body {
   color: #ffffff;
   z-index: 2;
 }
-
 
 
 // Always set the map height explicitly to define the size of the div

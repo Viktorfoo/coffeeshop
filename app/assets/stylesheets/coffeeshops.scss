@@ -69,7 +69,7 @@ body {
 .nav-item {
   display: inline-block;
   font-size: 14px;
-  font-weight: 100;
+  font-weight: lighter;
   margin-top: 18px;
   margin-right: 10px;
 }
@@ -84,11 +84,13 @@ body {
 .navbar-default .navbar-nav > li > a {
   line-height: 13px;
   color: #ffffff;
+  font-weight: lighter;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   text-decoration: none;
   color: #ffffff;
+  font-weight: lighter;
 }
 
 
@@ -135,15 +137,15 @@ body {
   z-index: -1;
 }
 
-.jumbo-head-text {
-  font-size: 48px;
-  font-weight: 100;
+jumbo-head-text {
+  font-size: 42px;
+  font-weight: lighter;
   color: #ffffff;
   z-index: 2;
 }
 
 .jumbo-bold-text {
-  font-weight: bold;
+  //font-weight: bold;
   z-index: 1;
 }
 
@@ -159,6 +161,7 @@ body {
   color: #FFF;
   text-align: center;
   width: 450px;
+  font-weight: lighter;
 }
 
 
@@ -264,6 +267,15 @@ height: 600px;
   margin: 0 auto;
   width: 300px;
 }
+.SignUpTextSub{
+  text-align: center;
+  font-size: 18px;
+  font-weight: lighter;
+  padding: 13px 0 20px 0;
+  color: #FFF; 
+  margin: 0 auto;
+  width: 470px;
+}
 
 .map-container {
   border: 3px solid black;
@@ -285,11 +297,13 @@ height: 600px;
 .filterpanel
 {
   font-size: 16px;
+  font-weight: lighter;
 }
 
 .filterpanel2
 {
   font-size: 10px;
+  font-weight: lighter;
   padding: 0px 0px 5px 0px;
 }
 .fa

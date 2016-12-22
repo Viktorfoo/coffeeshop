@@ -63,36 +63,36 @@ class CoffeeshopsController < ApplicationController
     render json: shops.map { |shop| shop.api_representation }  
   end
 
-  def update4square
-  #response = HTTParty.get('https://api.foursquare.com/v2/venues/search?client_id=ILD5DYYDXBNK3SFMRR4O15U34EDA3YRMB0DM351Z0EJPZSSX&client_secret=FCXPOWELSYKJCHMUDBI3FIR1MOTH51I5KAFPQNPX0EZ2EKEQ&v=20130815&ll=1.2921502,103.8473175&query=coffee')
-  param_lat = params[:lat]
-  param_lon = params[:lon]
-  param_distance = params[:distance] 
-  response = HTTParty.get('https://api.foursquare.com/v2/venues/search?client_id=ILD5DYYDXBNK3SFMRR4O15U34EDA3YRMB0DM351Z0EJPZSSX&client_secret=FCXPOWELSYKJCHMUDBI3FIR1MOTH51I5KAFPQNPX0EZ2EKEQ&v=20130815&ll='+ param_lon + ',' +  param_lat +'&query=coffee&radius='+param_distance)
+  #def update4square
+  ##response = HTTParty.get('https://api.foursquare.com/v2/venues/search?client_id=ILD5DYYDXBNK3SFMRR4O15U34EDA3YRMB0DM351Z0EJPZSSX&client_secret=FCXPOWELSYKJCHMUDBI3FIR1MOTH51I5KAFPQNPX0EZ2EKEQ&v=20130815&ll=1.2921502,103.8473175&query=coffee')
+  #param_lat = params[:lat]
+  #param_lon = params[:lon]
+  #param_distance = params[:distance] 
+  #response = HTTParty.get('https://api.foursquare.com/v2/venues/search?client_id=ILD5DYYDXBNK3SFMRR4O15U34EDA3YRMB0DM351Z0EJPZSSX&client_secret=FCXPOWELSYKJCHMUDBI3FIR1MOTH51I5KAFPQNPX0EZ2EKEQ&v=20130815&ll='+ param_lon + ',' +  param_lat +'&query=coffee&radius='+param_distance)
   
 	
-  #binding.pry
-	responsevenue = response["response"]["venues"]
+  ##binding.pry
+	#responsevenue = response["response"]["venues"]
 	#responsecategory = response["response"]["category"]
 
-	responsevenue.each do |shop_obj|
-		puts shop_obj["name"]
-		puts shop_obj["contact"]["phone"]
-		puts shop_obj["id"]
-		puts shop_obj["location"]["crossStreet"]
-		puts shop_obj["location"]["address"]
-		puts shop_obj["location"]["postalCode"]
-		puts shop_obj["location"]["lat"]
-		puts shop_obj["location"]["lng"]
-		puts shop_obj["location"]["country"]
-		#Shop.create(name: shop_obj["name"], phone_office: shop_obj["contact"]["phone"], Unique_API_ID: shop_obj["id"])    
-  		Shop.create(name: shop_obj["name"], phone_office: shop_obj["contact"]["phone"], Unique_API_ID: shop_obj["id"],address: shop_obj["location"]["crossStreet"], lonlat: "POINT(#{shop_obj['location']["lng"]} #{shop_obj["location"]["lat"]})")    
+	#responsevenue.each do |shop_obj|
+	#	puts shop_obj["name"]
+	#	puts shop_obj["contact"]["phone"]
+	#	puts shop_obj["id"]
+	#	puts shop_obj["location"]["crossStreet"]
+	#	puts shop_obj["location"]["address"]
+	#	puts shop_obj["location"]["postalCode"]
+	#	puts shop_obj["location"]["lat"]
+	#	puts shop_obj["location"]["lng"]
+	#	puts shop_obj["location"]["country"]
+	#	#Shop.create(name: shop_obj["name"], phone_office: shop_obj["contact"]["phone"], Unique_API_ID: shop_obj["id"])    
+  #		Shop.create(name: shop_obj["name"], phone_office: shop_obj["contact"]["phone"], Unique_API_ID: shop_obj["id"],address: shop_obj["location"]["crossStreet"], lonlat: "POINT(#{shop_obj['location']["lng"]} #{shop_obj["location"]["lat"]})")    
   		
-		puts "_______________________________"		
-  	end
+	#	puts "_______________________________"		
+  #	end
 
-      render text: "OK"    
-  end
+   #   render text: "OK"    
+  #end
 
   def show
   
