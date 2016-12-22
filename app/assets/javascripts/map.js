@@ -371,14 +371,14 @@
            for (var i = 0; i < gmarker1.length; i++) {
             
 
-            if (gmarker1low_crowd_status[i] > 0) 
+            if (gmarker1low_crowd[i] > 0) 
             {
-              console.log("Crowd Status True" + gmarker1low_crowd_status[i].toString());                          
+              console.log("Crowd Status True" + gmarker1low_crowd[i].toString());                          
               gmarker1[i].setVisible(true)        
             }
             else
             {
-              console.log("Crowd Status False " + gmarker1low_crowd_status[i].toString());  
+              console.log("Crowd Status False " + gmarker1low_crowd[i].toString());  
             
               gmarker1[i].setVisible(false)
             }
