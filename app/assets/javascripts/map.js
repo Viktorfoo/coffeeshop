@@ -255,7 +255,7 @@
             console.log("Power Outlet Check is true ");
            for (var i = 0; i < gmarker1.length; i++) {
             
-            if (gmarker1new_cafe[i] == true) 
+            if (gmarker1power_outlet[i] == true) 
             {
                           
               gmarker1[i].setVisible(true)        
